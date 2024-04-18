@@ -1,21 +1,36 @@
 **Product Catalogue Application**
-Overview
+
+**Overview**
 
 The Product Catalogue Application is a Spring Boot project aimed at managing product information. It allows users to perform various operations such as adding, updating, deleting, and searching for products.
-**
-Features**
+
+**Features**
+
 Add Product: Users can add new products along with their attributes and categories.
 Update Product: Users can update existing product information.
 Delete Product: Users can delete products from the catalogue.
 Search Product: Users can search for products based on their name, categories, and attributes.
+
+
 **Technologies Used**
 
+Spring Boot: Provides a robust framework for building and deploying Java applications.
+Spring Data JPA: Simplifies database access and manipulation using the Java Persistence API (JPA).
+MySQL: Used as the database management system for storing product information.
+Hibernate: Provides object-relational mapping (ORM) capabilities for interacting with the database.
+RESTful API: Exposes endpoints for performing CRUD operations on product data.
+
+
 **Setup Instructions**
+
+
 Clone the Repository:
 bash
 Copy code
-git clone https://github.com/your_username/product-catalogue.git
-Database Configuration:
+git clone [https://github.com/your_username/product-catalogue.git]
+
+
+**Database Configuration:**
 Open the application.properties file located in src/main/resources.
 Update the database URL, username, and password according to your MySQL configuration.
 Run the Application:
@@ -24,6 +39,8 @@ Copy code
 mvn spring-boot:run
 Access the Application:
 Once the application is running, you can access it at http://localhost:8080.
+
+
 **API Endpoints**
 Add Product: POST /products
 Update Product: PUT /products/{id}
