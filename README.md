@@ -8,7 +8,8 @@ This project is a RESTful API for managing a product catalogue. It provides endp
 
 - Spring Boot
 - Spring Data JPA
-- MySQL
+- MySQL![pd](https://github.com/DurgeshDandage/Product_Catalogue/assets/144985947/dbda38ac-3f1c-419b-8f22-ac6cef102276)
+
 - Maven
 
 ### Installation
