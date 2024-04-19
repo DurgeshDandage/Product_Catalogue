@@ -1,14 +1,13 @@
 package com.example.Product.Catalogue.Services;
 
+import com.example.Product.Catalogue.Models.Category;
 import com.example.Product.Catalogue.Models.Product;
 import com.example.Product.Catalogue.Repositories.CategoryRepository;
 import com.example.Product.Catalogue.Repositories.ProductRepository;
-import jdk.jfr.Category;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.stream.Collectors;
 
 @Service
 public class ProductServiceImpl implements ProductService {
@@ -62,7 +61,6 @@ public class ProductServiceImpl implements ProductService {
     }
 
 }
-
 
 
 
