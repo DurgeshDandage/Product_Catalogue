@@ -146,6 +146,8 @@ json
   }
 }
 Database Integration
+
+Schema Design ![pd](https://github.com/DurgeshDandage/Product_Cat![pd](https://github.com/DurgeshDandage/Product_Catalogue/assets/144985947/bcda82cd-393b-4bac-ae3c-0b0455bc002c)
+alogue/assets/144985947/dbda38ac-3f1c-419b-8f22-ac6cef102276)
 This project uses MySQL as the database. To integrate MySQL, update the database configuration in the application.properties file with your MySQL credentials.
 
-![pd](https://github.com/DurgeshDandage/Product_Catalogue/assets/144985947/dbda38ac-3f1c-419b-8f22-ac6cef102276)
