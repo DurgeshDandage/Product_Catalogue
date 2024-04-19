@@ -20,6 +20,10 @@ This project is a RESTful API for managing a product catalogue. It provides endp
 4. Build the project using Maven: `mvn clean package`.
 5. Run the project: `java -jar target/Product-Catalogue-0.0.1-SNAPSHOT.jar`.
 
+   ##Schema Design
+   
+![pd](https://github.com/DurgeshDandage/Product_Catalogue/assets/144985947/ac464f95-4450-4b0e-b62a-007c518b1b9e)
+
 ### API Documentation
 #### 1. Get All Products
 
@@ -145,9 +149,9 @@ json
     "size": "Large"
   }
 }
+
+
 Database Integration
 
-Schema Design ![pd](https://github.com/DurgeshDandage/Product_Cat![pd](https://github.com/DurgeshDandage/Product_Catalogue/assets/144985947/bcda82cd-393b-4bac-ae3c-0b0455bc002c)
-alogue/assets/144985947/dbda38ac-3f1c-419b-8f22-ac6cef102276)
 This project uses MySQL as the database. To integrate MySQL, update the database configuration in the application.properties file with your MySQL credentials.
 
