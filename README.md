@@ -1,50 +1,150 @@
-**Product Catalogue Application**
+# Product Catalogue API
 
-**Overview**
+## Overview
 
-The Product Catalogue Application is a Spring Boot project aimed at managing product information. It allows users to perform various operations such as adding, updating, deleting, and searching for products.
+This project is a RESTful API for managing a product catalogue. It provides endpoints to perform CRUD operations on products and includes advanced features like pagination, sorting, and rating.
 
-**Features**
+## Technologies Used
 
-Add Product: Users can add new products along with their attributes and categories.
-Update Product: Users can update existing product information.
-Delete Product: Users can delete products from the catalogue.
-Search Product: Users can search for products based on their name, categories, and attributes.
+- Spring Boot
+- Spring Data JPA
+- MySQL
+- Maven
 
+### Installation
 
-**Technologies Used**
+1. Clone this repository to your local machine.
+2. Create a MySQL database named `product_catalogue`.
+3. Update the database configuration in `application.properties` file located in `src/main/resources`.
+4. Build the project using Maven: `mvn clean package`.
+5. Run the project: `java -jar target/Product-Catalogue-0.0.1-SNAPSHOT.jar`.
 
-Spring Boot: Provides a robust framework for building and deploying Java applications.
-Spring Data JPA: Simplifies database access and manipulation using the Java Persistence API (JPA).
-MySQL: Used as the database management system for storing product information.
-Hibernate: Provides object-relational mapping (ORM) capabilities for interacting with the database.
-RESTful API: Exposes endpoints for performing CRUD operations on product data.
+### API Documentation
+#### 1. Get All Products
 
+**Endpoint:** `GET /products`
 
-**Setup Instructions**
+**Request Format:** 
+- No request parameters required for fetching all products.
 
+**Response Format:** 
+- Status Code: 200 OK
+- Content Type: application/json
 
-Clone the Repository:
-bash
+```json
+{
+  "content": [
+    {
+      "id": 1,
+      "name": "Product 1",
+      // other product attributes
+    },
+    {
+      "id": 2,
+      "name": "Product 2",
+      // other product attributes
+    },
+    // more products
+  ],
+  "totalElements": 100,  // total number of products
+  "totalPages": 10,       // total number of pages
+  "size": 10,             // page size
+  "number": 0,            // current page number
+  "numberOfElements": 10  // number of products on the current page
+}
+2. Get Product by ID
+Endpoint: GET /products/{id}
+
+Request Format:
+
+Path Variable: {id} - The ID of the product to retrieve.
+Response Format:
+
+Status Code: 200 OK
+Content Type: application/json
+json
+
+{
+  "id": 1,
+  "name": "Product 1",
+  // other product attributes
+}
+3. Add Product
+Endpoint: POST /products
+
+Request Format:
+
+Content Type: application/json
+Request Body: JSON object representing the new product.
+json
+
+{
+  "name": "New Product",
+  // other product attributes
+}
+Response Format:
+
+Status Code: 200 OK
+Content Type: application/json
+json
+
+{
+  "id": 101,
+  "name": "New Product",
+  // other product attributes
+}
+4. Update Product
+Endpoint: PUT /products/{id}
+
+Request Format:
+
+Path Variable: {id} - The ID of the product to update.
+Content Type: application/json
+Request Body: JSON object representing the updated product.
+json
+
+{
+  "name": "Updated Product",
+  // other updated product attributes
+}
+Response Format:
+
+Status Code: 200 OK
+Content Type: application/json
+json
 Copy code
-git clone [https://github.com/your_username/product-catalogue.git]
+{
+  "id": 101,
+  "name": "Updated Product",
+  // other updated product attributes
+}
+5. Delete Product
+Endpoint: DELETE /products/{id}
 
+Request Format:
 
-**Database Configuration:**
-Open the application.properties file located in src/main/resources.
-Update the database URL, username, and password according to your MySQL configuration.
-Run the Application:
-bash
-Copy code
-mvn spring-boot:run
-Access the Application:
-Once the application is running, you can access it at http://localhost:8080.
+Path Variable: {id} - The ID of the product to delete.
+Response Format:
 
+Status Code: 204 No Content
+Data Model
+Product Entity
+Here's a sample JSON representing the structure of the Product entity:
 
-**API Endpoints**
-Add Product: POST /products
-Update Product: PUT /products/{id}
-Delete Product: DELETE /products/{id}
-Search Product: GET /products/search?name={name}&categories={categories}&attributes={attributes}
-For detailed information on how to use each endpoint, refer to the API documentation.
+json
 
+{
+  "id": 1,
+  "name": "Sample Product",
+  "description": "This is a sample product",
+  "price": 50.00,
+  "categories": ["Electronics", "Gadgets"],
+  "attributes": {
+    "color": "Black",
+    "size": "Large"
+  }
+}
+Database Integration
+This project uses MySQL as the database. To integrate MySQL, update the database configuration in the application.properties file with your MySQL credentials.
+
+![pd](https://github.com/DurgeshDandage/Product_Catalogue/assets/144985947/c9962986-2333-438a-ac39-c54fa4818aab)
