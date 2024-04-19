@@ -8,7 +8,7 @@ This project is a RESTful API for managing a product catalogue. It provides endp
 
 - Spring Boot
 - Spring Data JPA
-- MySQL![pd](https://github.com/DurgeshDandage/Product_Catalogue/assets/144985947/dbda38ac-3f1c-419b-8f22-ac6cef102276)
+- MySQL
 
 - Maven
 
@@ -148,4 +148,4 @@ json
 Database Integration
 This project uses MySQL as the database. To integrate MySQL, update the database configuration in the application.properties file with your MySQL credentials.
 
-![pd](https://github.com/DurgeshDandage/Product_Catalogue/assets/144985947/c9962986-2333-438a-ac39-c54fa4818aab)
+![pd](https://github.com/DurgeshDandage/Product_Catalogue/assets/144985947/dbda38ac-3f1c-419b-8f22-ac6cef102276)
